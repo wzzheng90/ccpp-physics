@@ -4687,6 +4687,7 @@ endif   ! croptype == 0
        endif
 
        cwpc = (cwp * vai * hcan * fhg)**0.5
+       cwpc = max(min(cwpc,5.0),1.0)
 !       cwpc = (cwp*fhg)**0.5
 
        tmp1 = exp( -cwpc*z0hg/hcan )
